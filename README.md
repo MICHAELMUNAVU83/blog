@@ -1,24 +1,36 @@
-# README
+# Blog App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Built With
 
-Things you may want to cover:
+- Ruby
+- Ruby on Rails
 
-* Ruby version
+## Setup
 
-* System dependencies
+```
+ git clone https://github.com/MICHAELMUNAVU83/blog.git
+ cd blog
+```
 
-* Configuration
+## Author
 
-* Database creation
+👤 **MICHAEL MUNAVU**
 
-* Database initialization
+- GitHub: [@githubhandle](https://github.com/MICHAELMUNAVU83)
+- Twitter: [@twitterhandle](https://twitter.com/MunavuMichael)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/michael-munavu-78703a218/)
 
-* How to run the test suite
+## 🤝 Contributing
 
-* Services (job queues, cache servers, search engines, etc.)
+Contributions, issues, and feature requests are welcome!
 
-* Deployment instructions
+Feel free to check the [issues page](../../issues/).
 
-* ...
+## Show your support
+
+Give a ⭐️ if you liked this project!
+
+## Acknowledgments
+
+- Microverse
+- Code Reviewers
