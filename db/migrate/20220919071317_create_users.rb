@@ -4,9 +4,9 @@ class CreateUsers < ActiveRecord::Migration[7.0]
       t.string :name
       t.string :photo
       t.string :bio
-      t.postscounter :postscounter
+      t.integer :postscounter
 
       t.timestamps
-    ends
+    end
   end
 end
