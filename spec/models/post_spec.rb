@@ -18,4 +18,20 @@ RSpec.describe Post, type: :model do
         quasi aliquam eligendi, placeat qui corporis!")
     expect(post).to_not be_valid
   end
+  it 'is not valid if posts counter is not a number ' do
+    post = Post.new(title: 'New post', postscounter: 'not a number')
+    expect(post).to_not be_valid
+  end
+  it 'is not valid if likes counter is not a number ' do
+    post = Post.new(title: 'New post', likescounter: 'not a number')
+    expect(post).to_not be_valid
+  end
+  it 'is not valid if posts counter is less than 0 ' do
+    post = Post.new(title: 'New post', postscounter: -1)
+    expect(post).to_not be_valid
+  end
+  it 'is not valid if likes counter is less than 0 ' do
+    post = Post.new(title: 'New post', likescounter: -1)
+    expect(post).to_not be_valid
+  end
 end
