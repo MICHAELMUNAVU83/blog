@@ -1,15 +1,7 @@
 name: Tests
 
 on: pull_request
-services:
-  postgres:
-    image: postgres:12.2
-    env:
-      POSTGRES_PASSWORD: 7677
-      POSTGRES_USER: trance
-    ports:
-      - 5432:5432
-    
+      
 jobs:
   rspec:
     name: RSpec
