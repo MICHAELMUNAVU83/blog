@@ -6,6 +6,7 @@ jobs:
   rspec:
     name: RSpec
     runs-on: ubuntu-18.04
+    ports: - 5432:5432
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-ruby@v1
