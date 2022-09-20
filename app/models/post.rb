@@ -4,9 +4,8 @@ class Post < ApplicationRecord
   has_many :comments
   has_many :likes
   validates :title, presence: true, length: { maximum: 250 }
-  validates :postscounter , numericality: { greater_than_or_equal_to: 0 }
-  validates :likescounter , numericality: { greater_than_or_equal_to: 0 }
-
+  validates :postscounter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+  validates :likescounter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
   def last_five_comments
     comments.last(5)
