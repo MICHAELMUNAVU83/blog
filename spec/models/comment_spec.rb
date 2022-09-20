@@ -5,7 +5,7 @@ RSpec.describe Comment, type: :model do
     expect(comment).to_not be_valid
   end
   it 'User counter to increment' do
-    comment.post = Post.new(title: 'Post One', text: 'This is the post one')
+    comment.post = Post.new(title: 'Post 1', text: 'This is the post one')
     comment.send(:comments_counter)
     expect(comment.post.commentscounter).to be(1)
   end
