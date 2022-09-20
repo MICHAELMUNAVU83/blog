@@ -28,6 +28,7 @@ ActiveRecord::Schema[7.0].define(version: 20_220_919_072_402) do
     t.string 'text'
     t.integer 'postscounter'
     t.integer 'likescounter'
+    t.integer 'commentscounter'
     t.datetime 'created_at', null: false
     t.datetime 'updated_at', null: false
     t.bigint 'user_id', null: false
