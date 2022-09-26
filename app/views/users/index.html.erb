@@ -1,1 +1,6 @@
-<p>This is for all users</p>
+<% @users.each do |f| %>
+ <p>   UserName: <%= f.name %></p>
+  <p>  Number of Posts: <%= f.postscounter %></p>
+
+
+<% end %>

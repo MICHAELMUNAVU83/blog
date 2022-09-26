@@ -1,1 +1,7 @@
-<p>This is a single user </p>
+<p>UserName :<%=   @user.name %></p>
+<p> Number of Posts :<%=  @user.postscounter %></p>
+<% @user.last_three_post.each do |f| %>
+    <p>   title: <%= f.title %></p>
+   
+   
+   <% end %>
