@@ -1,1 +1,27 @@
 New User
+
+<%= form_for @user do |f| %>
+    <div>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+    </div>
+    <div>
+        <%= f.label :photo %>
+        <%= f.text_field :photo %>
+    </div>
+    <div>
+        <%= f.label :bio %>
+        <%= f.text_field :bio %>
+    </div>
+    <div>
+        <%= f.label :postscounter %>
+        <%= f.text_field :postscounter %>
+    </div>
+    <div>
+        <%= f.submit "Add a nigga" %>
+    </div>
+
+
+<% end %>
+mike = User.create(name: 'Mike', photo: 'https://st.depositphotos.com/1002314/3418/i/950/depositphotos_34185209-stoc
+k-photo-african-business-man.jpg', bio: 'Teacher from Poland.', postscounter: 9)
