@@ -1,3 +1,24 @@
-<p><%=   @post.text %></p>
 
-<p>UserName:<%=   @post.user.name %></p>
+<div class="each-post">
+<div class="each-post-details">
+<p>Post <%=   @post.id %> by  <%=   @post.user.name %>  </p>
+<div>
+<p>Comments:<%=   @post.commentscounter %></p>
+<p>Likes:<%=   @post.likescounter %></p>
+</div>
+</div>
+<p><%=   @post.text %> </p>
+
+</div>
+<div class="comments-for-each-post">
+
+<% @post.comments.each do |f| %>
+ 
+    <p> <%= f.user.name %> : <%= f.text %> </p>
+
+ 
+   
+   
+<% end %>
+</div>
+   
