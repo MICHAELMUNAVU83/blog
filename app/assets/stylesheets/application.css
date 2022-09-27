@@ -73,8 +73,10 @@
 }
 .see-all-posts-button button {
   font-size: 2rem;
-  border-radius: 20px;
-  border: 10px solid antiquewhite;
+}
+.see-all-posts-button a {
+  text-decoration: none;
+  color: black;
 }
 .each-post-comments {
   margin: 10px;
