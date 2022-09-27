@@ -1,1 +1,43 @@
-<p>This is where all posts are for a single user </p>
+<div class="each-user-div">
+<img src="<%= @user.photo %> "  />
+
+<div>
+<p>UserName :<%=   @user.name %></p>
+<p> Number of Posts :<%=  @user.postscounter %></p>
+
+</div>
+</div>
+<% @posts.each_with_index do |f, index| %>
+    <div class="each-of-last-3-posts">
+    <p> Post <%= index +1 %>  </p>
+    
+    <p>   title: <%= f.title %></p>
+    <div class="likes-and-comments-div">
+    <p>   Comments: <%= f.commentscounter %></p>
+    <p>   Likes: <%= f.likescounter %></p>
+  
+
+
+    </div>
+    <%= link_to "See Post ", user_post_path(@user, f) %>
+    </div>
+    <div class="each-post-comments">
+    <% f.last_five_comments.each do |f| %>
+        <p> Username: <%= f.user.name %> Comment : <%= f.text %> </p>
+   
+     
+       
+       
+    <% end %>
+    </div>
+
+  
+
+ 
+   
+   
+   <% end %>
+<div class="see-all-posts-button">
+   <button>Pagination</button>
+   
+   </div>

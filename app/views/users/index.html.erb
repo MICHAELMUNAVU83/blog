@@ -1,1 +1,14 @@
-<p>This is for all users</p>
+<% @users.each do |f| %>
+  <div class="each-user-div">
+  <img src="<%= f.photo %> "  />
+
+     <div>
+        <p>   UserName: <%= f.name %></p>
+         <p>  Number of Posts: <%= f.postscounter %></p>
+         <%= link_to "See Profile", user_path(f) %>
+    </div>
+   
+  </div>
+
+
+<% end %>

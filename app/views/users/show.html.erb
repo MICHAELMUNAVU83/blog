@@ -1,1 +1,40 @@
-<p>This is a single user </p>
+
+<div class="each-user-div">
+<img src="<%= @user.photo %> "  /><div>
+<p>UserName :<%=   @user.name %></p>
+<p> Number of Posts :<%=  @user.postscounter %></p>
+
+</div>
+
+</div>
+<div class="bio">
+<p> Bio </p>
+<p >  <%=  @user.bio %></p>
+
+</div>
+
+
+<% @user.last_three_post.each_with_index do |f, index| %>
+    <div class="each-of-last-3-posts">
+    <p> Post <%= index +1 %>  </p>
+    
+    <p>   title: <%= f.title %></p>
+    <div class="likes-and-comments-div">
+    <p>   Comments: <%= f.commentscounter %></p>
+    <p>   Likes: <%= f.likescounter %></p>
+
+
+    </div>
+
+    
+    </div>
+   
+   
+<% end %>
+<div class="see-all-posts-button">
+<button>
+<%= link_to "See all posts", user_posts_path(@user) %>
+
+</button>
+
+</div>
