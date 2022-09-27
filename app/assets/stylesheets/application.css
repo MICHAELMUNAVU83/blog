@@ -13,3 +13,66 @@
  *= require_tree .
  *= require_self
  */
+.each-user-div {
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #ccc;
+  justify-content: space-evenly;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+.each-user-div img {
+  width: 100px;
+  height: 100px;
+}
+.each-user-div div {
+  background-color: antiquewhite;
+  margin: 10px;
+  padding-left: 20px;
+  width: 100%;
+  height: inherit;
+  border-radius: 5px;
+}
+.bio {
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  justify-content: flex-start;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+.each-of-last-3-posts {
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  justify-content: flex-start;
+  border-radius: 5px;
+  background-color: antiquewhite;
+}
+.each-of-last-3-posts .likes-and-comments-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.each-of-last-3-posts .likes-and-comments-div p {
+  margin: 0px 10px;
+}
+.see-all-posts-button {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  padding: 10px;
+  height: 50px;
+  font-size: 20rem;
+}
+.see-all-posts-button button {
+  font-size: 2rem;
+  border-radius: 20px;
+  border: 10px solid antiquewhite;
+}

@@ -1,6 +1,25 @@
-<p> first 3 posts </p>
-<% @posts.each do |f| %>
-    <p>   <%= f.text %></p>
+<div class="each-user-div">
+<img src= "https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80" width="100" height ="200"  />
+<div>
+<p>UserName :<%=   @user.name %></p>
+<p> Number of Posts :<%=  @user.postscounter %></p>
+
+</div>
+</div>
+<% @posts.each_with_index do |f, index| %>
+    <div class="each-of-last-3-posts">
+    <p> Post <%= index +1 %>  </p>
+    
+    <p>   title: <%= f.title %></p>
+    <div class="likes-and-comments-div">
+    <p>   Comments: <%= f.commentscounter %></p>
+    <p>   Likes: <%= f.likescounter %></p>
+
+
+    </div>
+
+    
+    </div>
  
    
    
