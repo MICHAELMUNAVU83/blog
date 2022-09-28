@@ -7,4 +7,23 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
   end
+  def new
+    @user = User.find(params[:user_id])
+    @post = Post.new
+  end
+  def create
+    @post = Post.new(post_params)
+    @post.user_id = params[:user_id]
+    if @post.save
+      redirect_to user_posts_path
+    else
+      render :new
+    end
+  end
+
+  private
+  def post_params
+    params.require(:post).permit(:text, :title, :user_id , :postscounter , :likescounter , :commentscounter)
+  end
+
 end
