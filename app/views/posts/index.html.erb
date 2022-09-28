@@ -15,21 +15,27 @@
     <div class="likes-and-comments-div">
     <p>   Comments: <%= f.commentscounter %></p>
     <p>   Likes: <%= f.likescounter %></p>
+   
+
+  
   
 
 
     </div>
+    <button>
     <%= link_to "See Post ", user_post_path(@user, f) %>
+    </button>
     </div>
     <div class="each-post-comments">
     <% f.last_five_comments.each do |f| %>
         <p> Username: <%= f.user.name %> Comment : <%= f.text %> </p>
-   
+       
      
        
        
     <% end %>
     </div>
+  
 
   
 
@@ -39,5 +45,7 @@
    <% end %>
 <div class="see-all-posts-button">
    <button>Pagination</button>
-   
-   </div>
+</div>
+<button>
+<%= link_to "add new post", new_user_post_path(@user) %>
+</button>

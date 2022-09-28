@@ -8,6 +8,9 @@
 </div>
 </div>
 <p><%=   @post.text %> </p>
+<%= render partial: 'likes/form' %>
+
+
 
 </div>
 <div class="comments-for-each-post">
@@ -15,10 +18,10 @@
 <% @post.comments.each do |f| %>
  
     <p> <%= f.user.name %> : <%= f.text %> </p>
+  
 
- 
-   
-   
 <% end %>
 </div>
-   
+<button>
+<%= link_to "Add a comment", new_user_post_comment_path(@post.user, @post) %>
+</button>
