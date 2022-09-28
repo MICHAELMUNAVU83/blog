@@ -5,7 +5,9 @@
      <div>
         <p>   UserName: <%= f.name %></p>
          <p>  Number of Posts: <%= f.postscounter %></p>
+         <button>
          <%= link_to "See Profile", user_path(f) %>
+         </button>
     </div>
    
   </div>
@@ -13,7 +15,9 @@
 
 <% end %>
 
-<%= link_to "New User", new_user_path %>
+<button>
+<%= link_to "Add a New User", new_user_path %>
+</button>
 
 
 
