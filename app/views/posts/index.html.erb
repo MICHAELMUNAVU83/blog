@@ -15,6 +15,9 @@
     <div class="likes-and-comments-div">
     <p>   Comments: <%= f.commentscounter %></p>
     <p>   Likes: <%= f.likescounter %></p>
+   
+
+  
   
 
 
@@ -24,12 +27,13 @@
     <div class="each-post-comments">
     <% f.last_five_comments.each do |f| %>
         <p> Username: <%= f.user.name %> Comment : <%= f.text %> </p>
-   
+       
      
        
        
     <% end %>
     </div>
+  
 
   
 
