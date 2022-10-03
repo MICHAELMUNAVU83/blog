@@ -1,5 +1,5 @@
 <div class="each-user-div">
-<img src="<%= @user.photo %> "  />
+<img src="<%= @user.photo %> " alt = "<%= @user.name %>"  />
 
 <div>
 <p>UserName :<%=   @user.name %></p>
@@ -12,6 +12,8 @@
     <p> Post <%= index +1 %>  </p>
     
     <p>   title: <%= f.title %></p>
+    <p>   text: <%= f.text %></p>
+
     <div class="likes-and-comments-div">
     <p>   Comments: <%= f.commentscounter %></p>
     <p>   Likes: <%= f.likescounter %></p>
