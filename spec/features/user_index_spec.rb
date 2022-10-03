@@ -5,5 +5,4 @@ RSpec.describe 'Home features' do
     visit root_path
     expect(page).to have_content('Welcome to the home page')
   end
- 
 end
