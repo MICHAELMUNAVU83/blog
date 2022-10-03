@@ -1,17 +1,18 @@
 Welcome to the home page
 <% @users.each do |f| %>
 
-
   <div class="each-user-div">
-  <img src="<%= f.photo %> "  />
+  <img src="<%= f.photo %> " alt = "<%= f.name %>"  />
 
      <div>
         <p>   UserName: <%= f.name %></p>
          <p>  Number of Posts: <%= f.postscounter %></p>
          <button>
-         <%= link_to "See Profile", user_path(f) %>
+         <%= link_to("See Profile", user_path(f)) %>
          </button>
     </div>
+
+
    
   </div>
 
