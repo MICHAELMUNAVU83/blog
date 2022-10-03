@@ -12,6 +12,11 @@
  cd blog
 ```
 
+## Testing
+Tests are present in the spec folder.
+
+run rspec --format documentation spec/ to check all test cases
+
 ## Author
 
 👤 **MICHAEL MUNAVU**
