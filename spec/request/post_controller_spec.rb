@@ -14,9 +14,6 @@ RSpec.describe 'Posr Tests', type: :request do
     it 'Response status was correct.' do
       expect(response).to have_http_status(:ok)
     end
-    it 'Includes correct placeholder text.' do
-      expect(response.body).to include('This is where all posts are for a single user')
-    end
   end
   context 'Show' do
     before(:each) do
@@ -31,9 +28,6 @@ RSpec.describe 'Posr Tests', type: :request do
     end
     it 'Response status was correct.' do
       expect(response).to have_http_status(:ok)
-    end
-    it 'Includes correct placeholder text.' do
-      expect(response.body).to include('This is a single post for a certain user')
     end
   end
 end

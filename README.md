@@ -11,6 +11,17 @@
  git clone https://github.com/MICHAELMUNAVU83/blog.git
  cd blog
 ```
+## Install gems
+
+```
+ bundle install
+```
+## Testing
+```
+Tests are present in the spec folder.
+
+run rspec --format documentation spec/ to check all test cases
+```
 
 
 

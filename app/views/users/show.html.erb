@@ -1,6 +1,6 @@
-
+each user
 <div class="each-user-div">
-<img src="<%= @user.photo %> "  /><div>
+<img src="<%= @user.photo %> " alt = "<%= @user.name %>"  /><div>
 <p>UserName :<%=   @user.name %></p>
 <p> Number of Posts :<%=  @user.postscounter %></p>
 
@@ -25,6 +25,9 @@
 
 
     </div>
+    <button>
+    <%= link_to "See Post", user_post_path(@user, f) %>
+    </button>
 
     
     </div>
