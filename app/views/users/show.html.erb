@@ -1,6 +1,6 @@
 each user
 <div class="each-user-div">
-<img src="<%= @user.photo %> "  /><div>
+<img src="<%= @user.photo %> " alt = "<%= @user.name %>"  /><div>
 <p>UserName :<%=   @user.name %></p>
 <p> Number of Posts :<%=  @user.postscounter %></p>
 
@@ -16,7 +16,7 @@ each user
 
 <% @user.last_three_post.each_with_index do |f, index| %>
     <div class="each-of-last-3-posts">
-    <p> Post <%= index +2 %>  </p>
+    <p> Post <%= index +1 %>  </p>
     
     <p>   title: <%= f.title %></p>
     <div class="likes-and-comments-div">
@@ -25,6 +25,9 @@ each user
 
 
     </div>
+    <button>
+    <%= link_to "See Post", user_post_path(@user, f) %>
+    </button>
 
     
     </div>
