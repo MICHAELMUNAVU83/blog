@@ -1,0 +1,35 @@
+<div class="each-post">
+<div class="each-post-details">
+<p>Post <%=   @post.id %> by  <%=   @post.user.name %>  </p>
+<div>
+<p>Comments:<%=   @post.commentscounter %></p>
+<p>Likes:<%=   @post.likescounter %></p>
+</div>
+</div>
+<p><%=   @post.text %> </p>
+<p><%=   @post.title %> </p>
+
+<% if can? :destroy , @post %>
+
+<%= button_to 'Delete post', user_post_path(@post.user, @post), method: :delete, data: { confirm: 'Are you sure?' } %>
+<% end %>
+<%= render partial: 'likes/form' %>
+
+
+
+</div>
+<div class="comments-for-each-post">
+
+<% @post.comments.each do |f| %>
+ 
+    <p> <%= f.user.name %> : <%= f.text %> </p>
+    <% if can? :destroy, f %>
+   <%= button_to 'Delete comment', user_post_comment_path(@post.user, @post, f), method: :delete, data: { confirm: 'Are you sure?' } %>
+   <% end %>
+  
+
+<% end %>
+</div>
+<button>
+<%= link_to "Add a comment", new_user_post_comment_path(@post.user, @post) %>
+</button>
