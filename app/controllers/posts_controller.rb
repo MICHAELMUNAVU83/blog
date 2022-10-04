@@ -15,8 +15,9 @@ class PostsController < ApplicationController
   end
 
   def create
-    post = Post.new(params[:post].permit(:title, :text))
+    post = Post.new(params[:post].permit(:title, :text, :user_id))
     post.user = current_user
+
     if post.save
       flash[:notice] = 'Post was created successfully.'
       redirect_to user_posts_path(current_user, post)
@@ -25,7 +26,6 @@ class PostsController < ApplicationController
       render :show
     end
   end
-
   def destroy
     post = Post.find(params[:id])
     if post.destroy

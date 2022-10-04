@@ -9,6 +9,7 @@
 </div>
 <p><%=   @post.text %> </p>
 <p><%=   @post.title %> </p>
+<%= button_to 'Delete post', user_post_path(@post.user, @post), method: :delete, data: { confirm: 'Are you sure?' } %>
 <%= render partial: 'likes/form' %>
 
 
