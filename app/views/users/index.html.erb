@@ -2,18 +2,7 @@
 <% link_to "Sign in", new_user_session_path %>
 <% @users.each do |f| %>
 
-  <div class="each-user-div">
-  <img src="<%= f.photo %> " alt = "<%= f.name %>"  />
 
-     <div>
-        <p>   UserName: <%= f.name %></p>
-         <p>  Number of Posts: <%= f.postscounter %></p>
-         <button>
-         <%= link_to("See Profile", user_path(f)) %>
-         </button>
-         <%= link_to "Change Password", edit_user_registration_path %>
-         
-    </div>
 
 
    
