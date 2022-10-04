@@ -12,4 +12,8 @@ class User < ApplicationRecord
   def last_three_post
     posts.includes(:user).order(created_at: :DESC).limit(3)
   end
+
+  def isadmin?
+    role == 'admin'
+  end
 end

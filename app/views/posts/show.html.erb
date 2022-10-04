@@ -9,7 +9,11 @@
 </div>
 <p><%=   @post.text %> </p>
 <p><%=   @post.title %> </p>
+
+<% if can? :destroy , @post %>
+
 <%= button_to 'Delete post', user_post_path(@post.user, @post), method: :delete, data: { confirm: 'Are you sure?' } %>
+<% end %>
 <%= render partial: 'likes/form' %>
 
 
@@ -20,7 +24,9 @@
 <% @post.comments.each do |f| %>
  
     <p> <%= f.user.name %> : <%= f.text %> </p>
+    <% if can? :destroy, f %>
    <%= button_to 'Delete comment', user_post_comment_path(@post.user, @post, f), method: :delete, data: { confirm: 'Are you sure?' } %>
+   <% end %>
   
 
 <% end %>
