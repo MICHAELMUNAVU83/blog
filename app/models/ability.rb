@@ -6,8 +6,8 @@ class Ability
 
     return unless user.present?
 
-    can :manage, Post
-    can :manage, Comment
+    can :manage, Post, user_id: user.id
+    can :manage, Comment, user_id: user.id
 
     return unless user.isadmin?
 
