@@ -1,7 +1,4 @@
-Welcome to the home page
-<% @users.each do |f| %>
-
-  <div class="each-user-div">
+<div class="each-user-div">
   <img src="<%= f.photo %> " alt = "<%= f.name %>"  />
 
      <div>
@@ -10,19 +7,7 @@ Welcome to the home page
          <button>
          <%= link_to("See Profile", user_path(f)) %>
          </button>
+         <%= link_to "Change Password", edit_user_registration_path %>
+         
     </div>
-
-
-   
-  </div>
-
-
-<% end %>
-
-<button>
-<%= link_to "Add a New User", new_user_path %>
-</button>
-
-
-
 
