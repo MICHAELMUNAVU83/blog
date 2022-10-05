@@ -27,6 +27,7 @@ gem 'jbuilder'
 
 # devise
 gem 'devise'
+gem 'jwt'
 
 # cancancan
 gem 'cancancan'
