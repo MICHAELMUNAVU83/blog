@@ -8,3 +8,4 @@ class UsersController < ApplicationController
     @posts = @user.posts
   end
 end
+s
